@@ -20,7 +20,7 @@ class Todo(db.Model):
     title = db.Column(db.String(100))
     complete = db.Column(db.Boolean, default=False)
     date_modified = db.Column(db.DateTime, default=db.func.current_timestamp())
-
+    
 class TodoListSerializer:
     def __init__(self, todo_list):
         self.todo_list = todo_list
